@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Nexlink - Login</title>
+   </head>
+   <body>
+      <div class="login">
+         <img src="assets/img/catalina.jpg" alt="image" class="login__bg">
+
+         <form action="" class="login__form">
+            <h1 class="login__title">NexLogin</h1>
+
+            <div class="login__inputs">
+               <div class="login__box">
+                  <input type="email" id="email" placeholder="E-mail" required class="login__input">
+                  <i class="ri-mail-fill"></i>
+               </div>
+
+               <div class="login__box">
+                  <input type="password" id="password" placeholder="Senha" required class="login__input">
+                  <i class="ri-lock-2-fill"></i>
+               </div>
+            </div>
+
+            <div class="login__check">
+               <div class="login__check-box">
+                  <input type="checkbox" class="login__check-input" id="user-check">
+                  <label for="user-check" class="login__check-label">Lembrar de mim</label>
+               </div>
+
+               <a href="#" class="login__forgot">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" id="submit" class="login__button">Entrar</button>
+
+            <div class="login__register">
+               Sem conta? <a href="#">Registre-se</a>
+            </div>
+         </form>
+
+         <script type="text/javascript">
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // prevent default form submission behavior
+                // validate username and password
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                if (email === 'nexlink@nex.com' && password === 'nexlink') {
+                    alert('Login Correto!');
+                } else {
+                    alert('Senha ou E-Mail incorreto, tente novamente.');
+                }
+            });
+        </script>
+      </div>
+   </body>
+</html>
